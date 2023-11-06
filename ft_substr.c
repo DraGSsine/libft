@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:12:21 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/04 21:16:29 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/06 09:31:57 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	size_t	s_len;
 	char	*ptr_str;
+	size_t	i;
 
+	i = 0;
 	if (s == NULL)
 		return (NULL);
 	s_len = strlen(s);
@@ -27,7 +29,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	ptr_str = malloc(len + 1);
 	if (ptr_str == NULL)
 		return (NULL);
-	strncpy(ptr_str, s + start, len);
+	while (i < len)
+		ptr_str[i++] = s[start++];
 	ptr_str[len] = '\0';
 	return (ptr_str);
 }

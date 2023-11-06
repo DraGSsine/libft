@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 17:17:48 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/05 12:00:42 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/06 11:59:41 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	len = get_num_length(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = malloc(len + 1);
 	if (str == NULL)
 		return (NULL);
 	str[len] = '\0';

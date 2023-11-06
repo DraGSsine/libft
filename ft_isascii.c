@@ -6,11 +6,11 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:13:43 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/03 13:11:55 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/06 20:16:09 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 	{

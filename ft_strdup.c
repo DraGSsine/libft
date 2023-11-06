@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:13:30 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/05 18:22:32 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/06 19:08:53 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@ char	*ft_strdup(const char *s1)
 
 	string = NULL;
 	i = 0;
-	if (s1 == NULL)
-	{
-		return (NULL);
-	}
 	len = ft_strlen (s1);
 	string = malloc (len + 1);
 	if (!string)

@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:13:31 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/05 09:10:16 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/06 13:03:07 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	**ft_split(const char *s, char c)
 	strs[nb_strings] = NULL;
 	while (i < nb_strings)
 	{
-		s = charcopy_until_char(strs + i, s, c);
+		s = charcopy_until_char(strs + i, s, c); 
 		if (!s)
 		{
 			while (i > 0)
@@ -80,24 +80,3 @@ char	**ft_split(const char *s, char c)
 	}
 	return (strs);
 }
-
-// int main()
-// {
-//     const char *input_string = " This is ";
-//     char separator = ' ';
-
-//     char **result = ft_split(input_string, separator);
-
-//     int i = 0;
-
-//     while (result[i])
-//     {
-//         printf("%s\n", result[i]);
-//         free(result[i]);
-//         i++;
-//     }
-
-//     free(result);
-
-//     return 0;
-// }
