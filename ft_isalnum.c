@@ -6,11 +6,9 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:11:09 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/06 11:31:56 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/07 14:31:54 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isalnum(int c)
 {

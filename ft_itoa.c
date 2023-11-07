@@ -6,12 +6,11 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 17:17:48 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/06 11:59:41 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/07 14:32:13 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static	size_t	get_num_length(int n)
 {

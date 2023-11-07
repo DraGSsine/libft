@@ -6,14 +6,14 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:13:31 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/06 13:03:07 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/07 15:13:47 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static	size_t	count_words(const char *str, char sp)
+static size_t	count_words(const char *str, char sp)
 {
 	size_t	nb_strings;
 
@@ -36,6 +36,8 @@ static const char	*charcopy_until_char(char **dest, const char *src, char c)
 {
 	const char	*start;
 	size_t		len;
+	char		*d;
+	const char	*s;
 
 	len = 0;
 	while (*src == c)
@@ -47,8 +49,13 @@ static const char	*charcopy_until_char(char **dest, const char *src, char c)
 	*dest = malloc(len + 1);
 	if (!*dest)
 		return (NULL);
-	strncpy (*dest, start, len);
-	(*dest)[len] = '\0';
+	d = *dest;
+	s = start;
+	while (s < src)
+	{
+		*d++ = *s++;
+	}
+	*d = '\0';
 	return (src);
 }
 
@@ -66,7 +73,7 @@ char	**ft_split(const char *s, char c)
 	strs[nb_strings] = NULL;
 	while (i < nb_strings)
 	{
-		s = charcopy_until_char(strs + i, s, c); 
+		s = charcopy_until_char(strs + i, s, c);
 		if (!s)
 		{
 			while (i > 0)

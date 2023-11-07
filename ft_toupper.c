@@ -6,11 +6,9 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:47:06 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/04 18:51:22 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/07 14:33:30 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_toupper(int c)
 {

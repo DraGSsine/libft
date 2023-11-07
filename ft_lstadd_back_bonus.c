@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 13:13:30 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/07 14:53:42 by youchen          ###   ########.fr       */
+/*   Created: 2023/11/06 22:25:20 by youchen           #+#    #+#             */
+/*   Updated: 2023/11/07 14:23:56 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strdup(const char *s1)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	i;
-	size_t	len;
-	char	*string;
+	t_list	*current_node;
 
-	string = NULL;
-	i = 0;
-	len = ft_strlen (s1);
-	string = malloc (len + 1);
-	if (!string)
+	if (!*lst)
 	{
-		return (NULL);
+		*lst = new;
+		return ;
 	}
-	while (i <= len)
+	current_node = *lst;
+	while (current_node->next)
 	{
-		string[i] = s1[i];
-		i++;
+		current_node = current_node->next;
 	}
-	return (string);
+	current_node->next = new;
 }
