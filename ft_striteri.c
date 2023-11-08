@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 15:30:11 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/06 07:48:26 by youchen          ###   ########.fr       */
+/*   Created: 2023/11/08 11:08:25 by youchen           #+#    #+#             */
+/*   Updated: 2023/11/08 11:25:10 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	if (s == NULL || f == NULL)
+	if (!s || !f)
 		return ;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		f(i, &s[i]);
 		i++;

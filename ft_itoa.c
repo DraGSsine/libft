@@ -6,17 +6,17 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 17:17:48 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/07 14:32:13 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/08 14:22:19 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	get_num_length(int n)
+static	size_t	get_num_length(int number)
 {
 	size_t	len;
 
-	if (n <= 0)
+	if (number <= 0)
 	{
 		len = 1;
 	}
@@ -24,9 +24,9 @@ static	size_t	get_num_length(int n)
 	{
 		len = 0 ;
 	}
-	while (n != 0)
+	while (number != 0)
 	{
-		n /= 10;
+		number /= 10;
 		len++;
 	}
 	return (len);
@@ -34,28 +34,28 @@ static	size_t	get_num_length(int n)
 
 char	*ft_itoa(int n)
 {
-	size_t	len;
-	char	*str;
+	size_t		len;
+	char		*str;
+	long int	number;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	len = get_num_length(n);
+	number = n;
+	len = get_num_length(number);
 	str = malloc(len + 1);
 	if (str == NULL)
 		return (NULL);
 	str[len] = '\0';
-	if (n < 0)
+	if (number < 0)
 	{
 		str[0] = '-';
-		n = -n;
+		number = -number;
 	}
-	else if (n == 0)
+	else if (number == 0)
 		str[0] = '0';
-	while (n != 0)
+	while (number != 0)
 	{
 		len--;
-		str[len] = '0' + (n % 10);
-		n /= 10;
+		str[len] = '0' + (number % 10);
+		number /= 10;
 	}
 	return (str);
 }

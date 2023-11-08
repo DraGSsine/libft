@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 22:25:20 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/08 14:23:13 by youchen          ###   ########.fr       */
+/*   Created: 2023/11/07 18:13:21 by youchen           #+#    #+#             */
+/*   Updated: 2023/11/08 16:33:22 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*current_node;
+	t_list	*tmp;
 
-	if (!*lst)
+	while (*lst)
 	{
-		*lst = new;
-		return ;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
-	current_node = *lst;
-	while (current_node->next)
-	{
-		current_node = current_node->next;
-	}
-	current_node->next = new;
 }
