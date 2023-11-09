@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 10:00:20 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/05 10:25:06 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/09 18:44:22 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
-	{
-		ft_putstr_fd("-2147483648", fd);
-		return ;
-	}
-	if (n < 0)
+	long int	ln;
+
+	ln = n;
+	if (ln < 0)
 	{
 		ft_putchar_fd('-', fd);
-		n = -n;
+		ln = -ln;
 	}
-	if (n >= 10)
+	if (ln >= 10)
 	{
-		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(ln / 10, fd);
 	}
-	ft_putchar_fd('0' + (n % 10), fd);
+	ft_putchar_fd('0' + (ln % 10), fd);
 }

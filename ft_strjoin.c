@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:50:32 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/07 14:53:39 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/09 19:07:31 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	x = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	ptr_str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!ptr_str)
 		return (NULL);
