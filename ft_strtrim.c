@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 14:33:15 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/07 14:54:49 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/09 12:34:23 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	len = 0;
 	if (!s1 || !set)
-		return (0);
+		return (NULL);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	len = ft_strlen(s1);

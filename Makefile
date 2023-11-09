@@ -14,17 +14,16 @@ NAME = libft.a
 
 all: $(NAME)
 
-%.o: %.c $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
-
 $(NAME): $(OBJECTS)
 	ar rcs $@ $(OBJECTS)
 
-bonus: $(NAME) $(OBJECTS_BONUS) $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS_BONUS) $(OBJECTS)
+%.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+bonus: $(NAME) $(OBJECTS_BONUS)
 
 clean:
-	rm -f *.out *.o
+	rm -f *.o
 
 fclean: clean
 	rm -f $(NAME)

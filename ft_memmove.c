@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 22:58:07 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/06 18:35:39 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/08 22:48:04 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			d[len] = s[len];
 	else
 	{
-		while (i < len)
-		{
-			d[i] = s[i];
-			i++;
-		}
+		ft_memcpy(dst, src, len);
 	}
 	return (dst);
 }

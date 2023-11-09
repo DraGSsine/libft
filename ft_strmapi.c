@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 17:30:54 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/07 14:54:42 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/09 12:25:55 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
 	char	*map;
 
 	i = 0;
-	if (s == 0)
+	if (!s)
 		return (NULL);
 	len = ft_strlen(s);
-	map = malloc(sizeof(char) * (len + 1));
+	map = malloc(len + 1);
 	if (!map)
 		return (NULL);
 	while (s[i] != '\0')
