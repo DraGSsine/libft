@@ -6,24 +6,20 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 17:17:48 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/08 14:22:19 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/11 17:59:46 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	get_num_length(int number)
+int	get_num_length(int number)
 {
 	size_t	len;
 
 	if (number <= 0)
-	{
 		len = 1;
-	}
 	else
-	{
 		len = 0 ;
-	}
 	while (number != 0)
 	{
 		number /= 10;
@@ -34,7 +30,7 @@ static	size_t	get_num_length(int number)
 
 char	*ft_itoa(int n)
 {
-	size_t		len;
+	int			len;
 	char		*str;
 	long int	number;
 

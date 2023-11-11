@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:35:33 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/09 19:23:58 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/11 16:54:17 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
 	size_t	i;
 	size_t	j;
 
+	if (!dest && destsize == 0)
+		return (0);
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	i = dest_len;

@@ -24,7 +24,7 @@ $(NAME): $(OBJECTS)
 bonus: $(OBJECTS) $(BOBJECTS)
 	$(AR) -r $(NAME) $?
 
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) -c $(CFLAGS) $?
 
 clean:

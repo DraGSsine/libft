@@ -3,36 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youchen <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:42:57 by youchen           #+#    #+#             */
-/*   Updated: 2023/10/31 20:42:58 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/11 18:37:50 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	r;
-	int	s;
-	int	i;
+#include "libft.h"
 
-	r = 0;
-	s = 1;
+int	atoip(const char *s, int i, int sign)
+{
+	unsigned long long	nb;
+	int					digc;
+
+	nb = 0;
+	digc = 0;
+	while (s[i] >= 48 && s[i] <= 57)
+	{
+		digc++;
+		if (digc == 20)
+		{
+			if (sign == -1)
+				return (0);
+			else
+				return (-1);
+		}
+		nb = nb * 10 + s[i++] - 48;
+	}
+	if (nb > LONG_MAX)
+	{
+		if (sign == -1)
+			return (0);
+		else
+			return (-1);
+	}
+	return ((int)(nb * sign));
+}
+
+int	ft_atoi(const char *nptr)
+{
+	int	i;
+	int	sign;
+	int	result;
+
 	i = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+	sign = 1;
+	result = 0;
+	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
 	{
 		i++;
 	}
-	if (str[i] == '-' || str[i] == '+')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (str[i] == '-')
-			s = s * -1;
+		if (nptr[i] == '-')
+			sign *= -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		r = r * 10 + (str[i] - '0');
+	while (nptr[i] == 48)
 		i++;
-	}
-	return (r * s);
+	result = atoip(nptr, i, sign);
+	return (result);
 }

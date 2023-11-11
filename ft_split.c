@@ -6,12 +6,11 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:13:31 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/09 18:56:48 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/11 16:25:13 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static size_t	count_words(const char *str, char sp)
 {
