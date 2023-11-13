@@ -13,7 +13,7 @@ BSOURCES = \
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
