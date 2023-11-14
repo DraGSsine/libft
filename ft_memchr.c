@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:23:34 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/11 14:31:12 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/14 00:03:07 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		i++;
 	}
 	return (0);
+}
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+	//ft_memchr(NULL,'c',10);
+	memchr(NULL,'c',10);
+	return 0;
 }

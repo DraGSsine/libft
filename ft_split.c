@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:13:31 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/11 16:25:13 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/13 23:39:39 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ char	**ft_split(const char *s, char c)
 	size_t	nb_strings;
 	size_t	i;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
 	nb_strings = count_words(s, c);
 	strs = malloc((nb_strings + 1) * sizeof(char *));
@@ -76,9 +78,7 @@ char	**ft_split(const char *s, char c)
 		if (!s)
 		{
 			while (i > 0)
-			{
 				free(strs[--i]);
-			}
 			free(strs);
 			return (NULL);
 		}

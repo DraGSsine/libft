@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:12:21 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/09 12:40:20 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/13 23:19:30 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
 	if (start >= s_len || len == 0)

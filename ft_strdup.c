@@ -6,12 +6,11 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:13:30 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/07 14:53:42 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/13 23:10:40 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {

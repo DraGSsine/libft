@@ -6,7 +6,7 @@
 /*   By: youchen <youchen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 10:00:20 by youchen           #+#    #+#             */
-/*   Updated: 2023/11/11 16:55:54 by youchen          ###   ########.fr       */
+/*   Updated: 2023/11/13 22:50:43 by youchen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	ft_putnbr_fd(int n, int fd)
 	long int	ln;
 
 	ln = n;
-	if (fd < 0)
-		return ;
 	if (ln < 0)
 	{
 		ft_putchar_fd('-', fd);

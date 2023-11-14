@@ -19,13 +19,13 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	$(AR) -r $@ $?
+	$(AR) -r $@
 
 bonus: $(OBJECTS) $(BOBJECTS)
-	$(AR) -r $(NAME) $?
+	$(AR) -r $(NAME)
 
 %.o: %.c libft.h
-	$(CC) -c $(CFLAGS) $?
+	$(CC) -c $(CFLAGS)
 
 clean:
 	rm -f $(OBJECTS) $(BOBJECTS)
